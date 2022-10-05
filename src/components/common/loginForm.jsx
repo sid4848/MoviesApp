@@ -7,9 +7,15 @@ class LoginForm extends Component {
     errors: {},
   };
 
-  handleChange = (e) => {
+  // handleChange = (e) => {
+  //   const account = { ...this.state.account };
+  //   account[e.currentTarget.name] = e.currentTarget.value;
+  //   this.setState({ account: account });
+  // };
+
+  handleChange = ({ currentTarget: input }) => {
     const account = { ...this.state.account };
-    account[e.currentTarget.name] = e.currentTarget.value;
+    account[input.name] = input.value;
     this.setState({ account: account });
   };
 
